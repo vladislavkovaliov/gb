@@ -28,14 +28,15 @@ checkout_or_create_branch() {
 
   git fetch --quiet
 
-  # Locally branch is already exist 
+  # Locally branch is already exist
   if git rev-parse --verify "$new_branch" >/dev/null 2>&1; then
     echo "🔁 Ветка '$new_branch' is already exist. Switching..."
     git checkout "$new_branch"
     return
   fi
 
-  # Check branch in origin  if git ls-remote --exit-code --heads origin "$new_branch" >/dev/null 2>&1; then
+  # Check branch in origin
+  if git ls-remote --exit-code --heads origin "$new_branch" >/dev/null 2>&1; then
     echo "🌐 Found '$new_branch' in origin. Craeting local copy..."
     git fetch origin "$new_branch":"$new_branch"
     git checkout "$new_branch"
