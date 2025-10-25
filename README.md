@@ -29,7 +29,7 @@ Install `gum`:
 brew install charmbracelet/tap/gum
 ```
 
-**Ubunru:**
+**Ubunbu:**
 
 ```bash
 sudo apt install gum
@@ -39,18 +39,13 @@ sudo apt install gum
 
 ## Installation
 
-1. Place the gb script in a folder, e.g., ~/scripts/gb
-2. Make it executable:
+```
+brew tap vladislavkovaiov/gb
 
-```bash
-chmod +x ~/gb
+brew install vladislavkovaiov/gb/gb
 ```
 
-3. Optional alias in .bashrc or .zshrc:
-
-```bash
-alias gb='source ~/gb'
-```
+Follow instruction after Installation.
 
 ---
 
